@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+upload:
+  stage: deploy
+  image: mikefarah/yq:4.14.2
+  script:
+    - yq e -i '.version = env(CI_COMMIT_TAG)' Chart.yaml
+    - yq e -i '.name = env(CI_PROJECT_NAME)' Chart.yaml
+    - yq e -i '.description = env(CI_PROJECT_NAME)' Chart.yaml
+    - helm package .
+    - > 
+      curl -u admin:${NEXUS_ADMIN_PASSWORD} ${MAGNUM_HELM_CHARTS_REPO} \
+        --upload-file ${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tgz -v
+  only:
+    - tags
