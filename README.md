@@ -5,8 +5,9 @@ qcloudy-common-app is a unified chart template for deploy services with CI/CD.
 ## TL;DR
 
 ```console
-$ helm repo add qcloudy
-$ helm install my-release qcloudy-common-app/ --set image.repository=<Hostname of your container registry> --set image.tag=<tag of your container image>
+$ helm repo add qcloudy https://okassov.github.io/qcloudy-common-app/charts
+$ helm repo update
+$ helm install my-release qcloudy/qcloudy-common-app --set image.repository=<Hostname of your container registry> --set image.tag=<tag of your container image>
 ```
 
 ## Prerequisites
@@ -19,7 +20,7 @@ $ helm install my-release qcloudy-common-app/ --set image.repository=<Hostname o
  To install the chart with the release name `my-release`:
 
 ```console
-$ helm install my-release qcloudy-common-app/ \
+$ helm install my-release qcloudy/qcloudy-common-app \
   --set image.repository=<Hostname of your container registry> \
   --set image.tag=<Tag of your container image>
 ```
