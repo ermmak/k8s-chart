@@ -1,4 +1,4 @@
-# qcloudy-qcloudy-common-app
+# qcloudy-common-app
 
 qcloudy-common-app is a unified chart template for deploy services with CI/CD.
 
