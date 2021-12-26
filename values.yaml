@@ -64,6 +64,9 @@ ingress:
   ##
   extraTls: []
 
+  ## @param ingress.ingressClassName IngressClass that will be be used to implement the Ingress (Kubernetes 1.18+)
+  ingressClassName:
+
 livenessProbe: {}
 readinessProbe: {}
 
