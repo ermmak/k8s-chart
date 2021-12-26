@@ -3,9 +3,9 @@ entries:
   qcloudy-common-app:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2021-12-26T05:32:52.953758+06:00"
+    created: "2021-12-26T06:46:44.212898+06:00"
     description: qcloudy-common-app
-    digest: 068e00054d0d487fcc18c95b99852ea3d7161ec907e5672ed55349305c2063c2
+    digest: 4ae2909bc9501779841fc5d708301b4e9b0865eae0c9350996c625a5d83601f3
     maintainers:
     - email: marat@qcloudy.io
       name: Okassov Marat
@@ -13,4 +13,4 @@ entries:
     urls:
     - qcloudy-common-app-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-26T05:32:52.952824+06:00"
+generated: "2021-12-26T06:46:44.2119+06:00"
