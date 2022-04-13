@@ -1,13 +1,13 @@
-# qcloudy-common-app
+# k8s-chart
 
-qcloudy-common-app is a unified chart template for deploy services with CI/CD.
+k8s-chart is a unified chart template for deploy services with CI/CD.
 
 ## TL;DR
 
 ```console
-$ helm repo add qcloudy https://okassov.github.io/qcloudy-common-app/charts
+$ helm repo add 1vision https://ermmak.github.io/k8s-chart/charts
 $ helm repo update
-$ helm install my-release qcloudy/qcloudy-common-app --set image.repository=<Hostname of your container registry> --set image.tag=<tag of your container image>
+$ helm install acquiring 1vision/k8s-chart --set image.repository=<Hostname of your container registry> --set image.tag=<tag of your container image>
 ```
 
 ## Prerequisites
@@ -17,10 +17,10 @@ $ helm install my-release qcloudy/qcloudy-common-app --set image.repository=<Hos
 
 ## Installing the Chart
 
- To install the chart with the release name `my-release`:
+ To install the chart with the release name `acquiring`:
 
 ```console
-$ helm install my-release qcloudy/qcloudy-common-app \
+$ helm install acquiring 1vision/k8s-chart \
   --set image.repository=<Hostname of your container registry> \
   --set image.tag=<Tag of your container image>
 ```
@@ -94,7 +94,7 @@ These commands deploy service on the Kubernetes cluster in the default configura
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install my-release -f values.yaml qcloudy-common-app/
+$ helm install acquiring -f values.yaml k8s-chart/
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
@@ -151,4 +151,4 @@ initContainers:
 
 ### Adding extra volumes
 
-The qcloudy-common-app chart supports mounting extra volumes (either PVCs, secrets or configmaps) by using the `extraVolumes` and `extraVolumeMounts` property. This can be combined with advanced operations like adding extra init containers and sidecars.
+The k8s-chart chart supports mounting extra volumes (either PVCs, secrets or configmaps) by using the `extraVolumes` and `extraVolumeMounts` property. This can be combined with advanced operations like adding extra init containers and sidecars.
